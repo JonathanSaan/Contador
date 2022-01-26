@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Mono+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+div#first {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: 25% 0 25% 0;
+}
+
+h1 {
+  color: #21EB00;
+}
+
+p {
+  color: gray;
+}
+
+input {
+  padding: 6px;
+  border-radius: 7px;
+  margin: 10px 0 10px 0;
+  height: 2rem;
+  width:  13rem;
+  color: gray;
+  background-color: transparent;
+}
+
+button {
+  border: none;
+  padding: 6px;
+  height: 2rem;
+  width:  13rem;
+  white-space: nowrap;
+  font-weight: 600;
+  border-radius: 7px;
+  background-color: #21EB00;
+}
+
+button:hover {
+  background-color: #26a811;
+}
+
+div#second {
+  display: none;
+  text-align: center;
+}
+
+div#second div#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  width: 100%;
+  padding: 0 10px 0 10px;
+}
+
+div#second button {
+  height: 40px;
+  width: 8rem;
+  border-radius: 20px;
+}
+
+div#second h1#faltam {
+  color: #ffffff3b;
+  margin: 30px 0 50px 0;
+}
+
+div#tempo {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  max-width: 80%;
+}
+
+div#tempo ul li {
+  list-style-type: none;
+}
+
+div#tempo ul li.numero {
+  color: white;
+  font-size: 50px;
+}
+
+div#tempo ul li h2 {
+  font-size: 10px;
+  color: #26a811;
+}
