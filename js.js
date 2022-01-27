@@ -1,6 +1,5 @@
 const today = new Date().toISOString().split('T')[0];
 let data = document.getElementsByName("setTodaysDate")[0].setAttribute('min', today);
-console.log(today.value)
 let botao = document.querySelector('button');
 let first_div = document.querySelector('#first');
 let second_div = document.querySelector('#second');
@@ -13,6 +12,7 @@ function verifique() {
   const secondsEL = document.querySelector("#segundo");
 
   const inputdata = document.querySelector('#setTodaysDate').value;
+
   function countdown () {
     const newYearsDate = new Date(inputdata);
     const currentDate = new Date();
@@ -32,16 +32,16 @@ function verifique() {
   function formatTime(time) {
     return time < 10 ? `0${time}`: time;
   }
-      
+
   if (inputdata == '' || inputdata == today) {
     return false;
   }
-  
+
   if (second_div.style.display === "none") {
     first.style.display = "none";
     second_div.style.display = "block";
-    countdown()
-    setInterval(countdown, 0)
+    countdown();
+    setInterval(countdown, 100);
   }
 }
 botao.addEventListener("click", verifique);
