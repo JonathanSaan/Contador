@@ -3,6 +3,7 @@ let data = document.getElementsByName("setTodaysDate")[0].setAttribute('min', to
 let botao = document.querySelector('button');
 let first_div = document.querySelector('#first');
 let second_div = document.querySelector('#second');
+let myInterval = -1;
 second_div.style.display = "none";
 
 function verifique() {
@@ -41,7 +42,7 @@ function verifique() {
     first.style.display = "none";
     second_div.style.display = "block";
     countdown();
-    setInterval(countdown, 100);
+    myInterval = setInterval(countdown, 100);
   }
 }
 botao.addEventListener("click", verifique);
@@ -51,5 +52,6 @@ function reiniciar_do_zero() {
   reiniciar = document.querySelector("#reiniciar");
   first.style.display = "block";
   second_div.style.display = "none";
+  clearInterval(myInterval)
 }
 reiniciar.addEventListener("click", reiniciar_do_zero);
